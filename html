@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Internship FAQ Chatbot</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    h1 {
+      color: #2c3e50;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 18px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Welcome to the AI Internship FAQ Chatbot</h1>
+  <p>🤖 Ask anything about the internship process, duration, documents required, or company details!</p>
+
+  <!-- Dialogflow Messenger Embed -->
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+  <df-messenger
+    intent="WELCOME"
+    chat-title="AI-FAQ-Bot"
+    agent-id="295e6469-332d-4737-ae12-5ec80d3a9cff"
+    language-code="en"
+  ></df-messenger>
+
+</body>
+</html>
