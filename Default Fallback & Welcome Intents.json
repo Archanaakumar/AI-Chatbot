@@ -1,0 +1,18 @@
+{
+  "name": "Default Fallback Intent",
+  "fallbackIntent": true,
+  "responses": [
+    {
+      "messages": [
+        {
+          "type": "message",
+          "speech": [
+            "I'm sorry, I didn't understand that. Can you please rephrase?",
+            "Oops! That didn't match any of our known questions.",
+            "Could you ask something else? I’m still learning."
+          ]
+        }
+      ]
+    }
+  ]
+}
