@@ -1,0 +1,101 @@
+# Artificial Intelligence Internship Website
+
+##  Task 1: AI Chatbot for Internship FAQs
+
+### Description:
+Build an AI-powered chatbot that answers common internship-related queries, such as application process, company info, document requirements, stipend, etc.
+
+###  Suggested Tech:
+- **Dialogflow** (Google NLP-based chatbot tool)
+- OR **Rasa** (Open-source conversational AI framework)
+- JSON-based intent-response training files
+
+###  Key Features:
+- Recognizes FAQs from user inputs
+- Responds with relevant info from pre-defined intents
+- Uses fallback for unrecognized queries
+- Supports greeting, internship process, duration, documents, etc.
+
+###  Sample Files:
+Your dataset contains:
+- Application Process.json
+- Company Info.json
+- Required Documents.json
+- Default Fallback/Welcome Intents
+
+These are suitable for Dialogflow or custom intent parsing.
+
+---
+
+##  Task 2: AI Recommendation Engine for Internship Domains
+
+###  Description:
+Recommends suitable internship domains (e.g., Web Dev, AI, ML, Embedded) to students based on their inputs.
+
+###  Technologies:
+- Python with scikit-learn / pandas
+- Content-based filtering (e.g., using student interests, skills)
+- Optional: Collaborative filtering
+
+###  Input Format (Example):
+
+```csv
+Name, Interests, Skills, Experience
+Alice, "AI, ML", "Python, TensorFlow", "AI Club Member"
+Bob, "Web Dev", "HTML, CSS, JS", "Built Portfolio Site"
+```
+
+###  Python Sample Code (Content-Based Filtering):
+
+```python
+import pandas as pd
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+
+# Sample dataset
+data = {
+    'Name': ['Alice', 'Bob', 'Charlie'],
+    'Profile': ['AI ML Python TensorFlow', 'Web HTML CSS JavaScript', 'Data Python SQL Excel']
+}
+df = pd.DataFrame(data)
+
+# Input from student
+student_input = "Machine Learning, Python, Deep Learning"
+
+# TF-IDF Vectorization
+vectorizer = TfidfVectorizer()
+profiles_tfidf = vectorizer.fit_transform(df['Profile'])
+input_tfidf = vectorizer.transform([student_input])
+
+# Compute similarity
+similarity = cosine_similarity(input_tfidf, profiles_tfidf)
+recommended_index = similarity.argmax()
+recommended_profile = df.loc[recommended_index, 'Profile']
+
+print(" Based on your profile, recommended domain is:", recommended_profile)
+```
+
+---
+
+##  Integration Plan for Website
+
+- **Homepage** with AI tutorial and featured projects slider
+- **Chatbot** embedded using Dialogflow iframe or Rasa Web UI
+- **Recommendation system** can be hosted with Flask/Streamlit for interactivity
+- User uploads resume or answers questionnaire → gets personalized domain suggestions
+
+---
+
+##  Deployment Hints
+- Host chatbot on Dialogflow or deploy Rasa on PythonAnywhere
+- Host recommendation model on Heroku / Streamlit Cloud
+- Frontend: HTML/CSS with JS integration for chatbot & result display
+
+---
+
+##  Files to Include in GitHub:
+- `/chatbot_intents/*.json` – All FAQ intents
+- `recommendation_engine.py` – The AI recommender code
+- `README.md` – Complete instructions
+- `index.html` – Website homepage with chatbot & AI tool links
+- Optional: Flask or Streamlit app for domain prediction
