@@ -1,0 +1,23 @@
+{
+  "name": "Company Info",
+  "auto": true,
+  "responses": [
+    {
+      "messages": [
+        {
+          "type": "message",
+          "speech": [
+            "We are a technology-driven company focused on AI, Machine Learning, and Web Development.",
+            "Our organization works on cutting-edge projects in Artificial Intelligence and software innovation.",
+            "We aim to bridge the gap between education and real-world tech exposure."
+          ]
+        }
+      ]
+    }
+  ],
+  "userSays": [
+    { "data": [{ "text": "Tell me about your company" }] },
+    { "data": [{ "text": "What does the organization do?" }] },
+    { "data": [{ "text": "Can you give me company details?" }] }
+  ]
+}
