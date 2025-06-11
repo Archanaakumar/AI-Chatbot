@@ -15,4 +15,23 @@
       ]
     }
   ]
+}  
+{
+  "name": "Default Welcome Intent",
+  "auto": true,
+  "responses": [
+    {
+      "messages": [
+        {
+          "type": "message",
+          "speech": [
+            "Hi! I'm your internship assistant. Ask me anything about the application process, company info, or documents required.",
+            "Hello there! Need help with internship info? I’m here to assist you.",
+            "Welcome! I can help you with FAQs related to internships. Try asking: 'How to apply?'"
+          ]
+        }
+      ]
+    }
+  ]
 }
+
