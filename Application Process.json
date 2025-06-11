@@ -1,0 +1,25 @@
+{
+  "name": "Application Process",
+  "auto": true,
+  "responses": [
+    {
+      "messages": [
+        {
+          "type": "message",
+          "speech": [
+            "You can apply for internships through our official portal at https://github.com/jayanibv/AI-FAQ-Chatbot. The process includes registration, uploading your resume, and completing a short assessment.",
+            "Just head over to our portal and fill out the form — it’s simple and quick! You’ll need your resume and a few basic details.",
+            "Visit our portal, register with your email, upload your resume, and take a short eligibility quiz. You'll get updates via email.",
+            "Internship applications are open at https://github.com/jayanibv/AI-FAQ-Chatbot. Register, upload your resume, and you’re good to go!",
+            "Apply through our official site — just submit your resume and complete the application steps. Best of luck!"
+          ]
+        }
+      ]
+    }
+  ],
+  "userSays": [
+    { "data": [{ "text": "How can I apply for an internship?" }] },
+    { "data": [{ "text": "What is the application process?" }] },
+    { "data": [{ "text": "Where do I submit my application?" }] }
+  ]
+}
