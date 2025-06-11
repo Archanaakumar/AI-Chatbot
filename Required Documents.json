@@ -1,0 +1,23 @@
+{
+  "name": "Required Documents",
+  "auto": true,
+  "responses": [
+    {
+      "messages": [
+        {
+          "type": "message",
+          "speech": [
+            "You’ll need to upload your resume, a valid ID proof, and academic transcripts.",
+            "Required documents include your CV, ID card, and mark sheets.",
+            "Make sure to submit a resume, college ID, and latest academic certificates."
+          ]
+        }
+      ]
+    }
+  ],
+  "userSays": [
+    { "data": [{ "text": "What documents are required?" }] },
+    { "data": [{ "text": "Which documents should I upload?" }] },
+    { "data": [{ "text": "Do I need to submit my resume?" }] }
+  ]
+}
